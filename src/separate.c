@@ -48,21 +48,18 @@ void	separate(t_stack **stack_a, t_stack **stack_b, int divider)
 	t_sep	val;
 
 	val.div = divider;
-	find_value(stack_a, &val);
-	while (val.len-- > 0)
+	while (!is_sorted_ascending(stack_a) && (*stack_a))
 	{
-		if ((*stack_a)->value <= val.mid_start)
+		find_value(stack_a, &val);
+		if (val.len == 3)
+			sort_three(stack_a);
+		else if (val.len == 2)
+			sort_two(stack_a);
+		else if ((*stack_a)->value <= val.mid_start)
 			double_operation(stack_a, stack_b, &val);
 		else if ((*stack_a)->value >= val.mid_end)
 			rotate(stack_a, 'a');
 		else
 			push(stack_a, stack_b, 'b');
 	}
-	find_value(stack_a, &val);
-	if (val.len == 3)
-		sort_three(stack_a);
-	else if (val.len == 2)
-		sort_two(stack_a);
-	else if (val.len > 3)
-		separate(stack_a, stack_b, divider);
 }

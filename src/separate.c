@@ -62,4 +62,10 @@ void	separate(t_stack **stack_a, t_stack **stack_b, int divider)
 		else
 			push(stack_a, stack_b, 'b');
 	}
+	while (val.max > (*stack_a)->value && (*stack_b))
+	{
+		find_value(stack_b, &val);
+		if (val.max > (*stack_a)->value)
+			push(stack_a, stack_b, 'b');
+	}
 }

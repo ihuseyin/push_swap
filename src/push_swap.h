@@ -32,7 +32,6 @@ typedef struct s_sep
 	int	mid_end;
 	int	max;
 	int	len;
-	int	div;
 }	t_sep;
 
 void	sort_three(t_stack **stack);

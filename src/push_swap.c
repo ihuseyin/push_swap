@@ -15,6 +15,8 @@ int	ft_divider(int len)
 		return (12);
 	else if (len > 400 && len <= 700)
 		return (15);
+	else if (len == 4)
+		return (3);
 	else
 		return (4);
 }

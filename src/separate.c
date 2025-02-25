@@ -6,8 +6,7 @@ static	void	parse_values(t_sep **val)
 	int		sum;
 
 	current = *val;
-	current->div = ft_divider(current->len);
-	sum = (current->max - current->min) / current->div;
+	sum = (current->max - current->min) / ft_divider(current->len);
 	current->mid_start = current->min + sum;
 	current->mid_end = current->mid_start + sum;
 }

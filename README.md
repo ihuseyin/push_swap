@@ -2,10 +2,10 @@ Tested with:
 https://github.com/SimonCROS/push_swap_tester
 
 5 elements, 10000 iterations (seed 1212121212)
-Worst = 10 instructions
-Median = 7 instructions
+Worst = 11 instructions
+Median = 8 instructions
 Best = 0 instructions
-Std. deviation = 1.8 instructions
+Std. deviation = 1.9 instructions
 Objective = 100 % under 12 (0 above)
 Precision = 100 % OK (0 KO)
 100 % effective

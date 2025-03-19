@@ -4,6 +4,9 @@ static	void	find_value(t_stack **stack, t_value *val)
 {
 	t_stack	*current;
 
+	val->max = 0;
+	val->max_index = 0;
+	val->len = 0;
 	current = *stack;
 	if (current)
 	{
